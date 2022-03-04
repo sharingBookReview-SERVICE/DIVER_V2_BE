@@ -1,0 +1,29 @@
+{
+  "name": "diver2",
+  "version": "2.0.0",
+  "description": "Backend server of Diver",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharingBookReview-SERVICE/DIVER_V2_BE.git"
+  },
+  "keywords": [
+    "book",
+    "review"
+  ],
+  "contributors": [
+    {
+      "name": "SeungBin Kim",
+      "email": "seungbin0508@gmail.com",
+      "url": "https://github.com/seungbin0508"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sharingBookReview-SERVICE/DIVER_V2_BE/issues"
+  },
+  "homepage": "https://github.com/sharingBookReview-SERVICE/DIVER_V2_BE#readme"
+}
