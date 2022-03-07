@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/sharingBookReview-SERVICE/DIVER_V2_BE/issues"
   },
-  "homepage": "https://github.com/sharingBookReview-SERVICE/DIVER_V2_BE#readme"
+  "homepage": "https://github.com/sharingBookReview-SERVICE/DIVER_V2_BE#readme",
+  "dependencies": {
+    "jest": "^27.5.1"
+  }
 }
