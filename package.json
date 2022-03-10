@@ -4,7 +4,10 @@
   "description": "Backend server of Diver",
   "main": "index.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "start": "node dist/app.js", 
+    "build": "tsc -p .", 
+    "dev": "nodemon --watch \"src/**/*.ts\" --exec \"ts-node\" src/app.ts"
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,11 @@
       "name": "SeungBin Kim",
       "email": "seungbin0508@gmail.com",
       "url": "https://github.com/seungbin0508"
+    },
+    {
+      "name": "Ohbin Kwon",
+      "email": "kobbb2100@gmail.com",
+      "url": "https://github.com/ohbin-kwon"
     }
   ],
   "license": "ISC",
@@ -28,7 +36,8 @@
   "homepage": "https://github.com/sharingBookReview-SERVICE/DIVER_V2_BE#readme",
   "dependencies": {
     "express": "^4.17.3",
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
