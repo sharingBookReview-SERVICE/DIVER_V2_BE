@@ -6,7 +6,8 @@ const config: Config.InitialOptions = {
 	extensionsToTreatAsEsm: ['.ts'],
 	globals: {
 		'ts-jest': {
-			useESM: true
+			useESM: true,
+			tsconfigFile: 'tsconfig.json'
 		}
 	},
 	moduleNameMapper: {
