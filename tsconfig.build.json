@@ -3,7 +3,4 @@
   "ts-node": {
     "files": true
   },
-  "compilerOptions": {
-
-  }
 }

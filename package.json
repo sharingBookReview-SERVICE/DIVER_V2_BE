@@ -4,7 +4,7 @@
   "description": "Backend server of Diver",
   "main": "index.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --no-cache",
     "start": "node dist/app.js", 
     "build": "tsc -p .", 
     "dev": "nodemon --watch \"src/**/*.ts\" --exec \"ts-node\" src/app.ts"
