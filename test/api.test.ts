@@ -27,7 +27,7 @@ describe('Sample Test', () => {
 						]
 					})
 			})
-			it('should crawl book data', () => {
+			describe('should crawl book data', () => {
 				it('should return book object', async () => {
 					const book_id = '9788937462481' // 인형의집
 					await request(app)
