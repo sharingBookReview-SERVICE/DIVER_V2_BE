@@ -1,11 +1,11 @@
 import request from 'supertest'
-import app from '../app'
+import app from '../src/app'
 
 describe('Sample Test', () => {
 	describe('Book APIs', () => {
 		describe('GET /books/:book_id', () => {
 			it('should return book object', async () => {
-				const book_id = 9788937460777
+				const book_id = '9788937460777'
 				// todo 미리 해당 책 정보를 db에 직접 넣어둬야함
 				await request(app)
 					.get(`/books/${book_id}`)
