@@ -1,11 +1,11 @@
-import express, { Request } from 'express'
+import express, { Request, Response } from 'express'
 
 const app = express()
 const PORT = 3000
 
 const cake: string = 'cake'
 
-app.get('/books', (req: Request, res): void => {
+app.get('/books', (req: Request, res: Response): void => {
 	const book_id: string = req.params.book_id
 
 	if (book_id == '9788937460777') {
@@ -20,8 +20,9 @@ app.get('/books', (req: Request, res): void => {
 	return
 })
 
-export default app
 
 app.listen(PORT, () => {
 	console.log(`App listening at PORT: ${PORT}`)
 })
+
+export default app
