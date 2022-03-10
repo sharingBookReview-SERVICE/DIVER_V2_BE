@@ -3,6 +3,8 @@ import express, { Request } from 'express'
 const app = express()
 const PORT = 3000
 
+const cake: string = 'cake'
+
 app.get('/books', (req: Request, res): void => {
 	const book_id: string = req.params.book_id
 
