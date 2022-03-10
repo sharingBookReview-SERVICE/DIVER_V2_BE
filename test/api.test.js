@@ -1,7 +1,7 @@
 import request from 'supertest'
 import app from '../app'
 
-describe('End-to-End Test', () => {
+describe('Sample Test', () => {
 	describe('Book APIs', () => {
 		describe('GET /books/:book_id', () => {
 			it('should return book object', async () => {
