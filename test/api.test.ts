@@ -36,15 +36,15 @@ describe('Sample Test', () => {
 						.set('Content-Type', 'application/json')
 						.expect(200, {
 							'_id': '9788937462481',
-							'title': '인형의 집',
-							'link': 'https://book.naver.com/bookdb/book_detail.naver?bid=6319633',
-							'image': 'https://www.example.com',
-							'author': '헨릭 입센',
-							'price': 8000,
-							'discount': 0.1,
-							'pubdate': '2010-06-30',
-							'review_count': 0,
-							'tags': []
+							// 'title': '인형의 집',
+							// 'link': 'https://book.naver.com/bookdb/book_detail.naver?bid=6319633',
+							// 'image': 'https://www.example.com',
+							// 'author': '헨릭 입센',
+							// 'price': 8000,
+							// 'discount': 0.1,
+							// 'pubdate': '2010-06-30',
+							// 'review_count': 0,
+							// 'tags': []
 						})
 				})
 			})

@@ -5,7 +5,7 @@ const PORT = 3000
 
 const cake: string = 'cake'
 
-app.get('/books', (req: Request, res: Response): void => {
+app.get('/books/:book_id', (req: Request, res: Response): void => {
 	const book_id: string = req.params.book_id
 
 	if (book_id == '9788937460777') {
@@ -17,7 +17,6 @@ app.get('/books', (req: Request, res: Response): void => {
 			_id: '9788937462481'
 		})
 	}
-	return
 })
 
 
