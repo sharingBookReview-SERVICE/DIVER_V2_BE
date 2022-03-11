@@ -31,4 +31,18 @@ All information on books are collected from [Naver Book Search API](https://deve
 
 # How it works
 
-# Install
+# Install locally
+Requires *Docker*
+## Build
+```
+docker build . -t diver2
+```
+Must be done before running
+## Test
+```
+docker run diver2 test
+```
+## Development
+```
+docker run diver2
+```
