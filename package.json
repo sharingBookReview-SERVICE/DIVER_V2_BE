@@ -4,7 +4,8 @@
   "description": "Backend server of Diver",
   "main": "index.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --no-cache --forceExit --detectOpenHandles"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --no-cache --forceExit --detectOpenHandles",
+    "start": "npx ts-node src/app.ts"
   },
   "repository": {
     "type": "git",
