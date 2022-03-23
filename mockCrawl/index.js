@@ -1,5 +1,6 @@
 import axios from 'axios'
 import cheerio from 'cheerio'
+import fs from 'fs/promises'
 /**
  * Book's ID from Naver book search (https://book.naver.com)
  * @typedef {number} bid
@@ -30,3 +31,5 @@ for (const bid of bidArr) {
 
 	result.push({title, link, image, author, price, discount, pubdate, review_count})
 }
+
+await fs.writeFile('./crawl.json', JSON.stringify(result))
