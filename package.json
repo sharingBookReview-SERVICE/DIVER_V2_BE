@@ -4,7 +4,8 @@
   "description": "Backend server of Diver",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "crawl": "node mockCrawl/index.mjs"
   },
   "repository": {
     "type": "git",
