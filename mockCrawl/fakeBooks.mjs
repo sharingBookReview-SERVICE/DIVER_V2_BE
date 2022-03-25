@@ -16,6 +16,7 @@ import ObjectID from 'bson-objectid'
 export default async function fakeBooks (bidArr) {
 
 	const result = []
+	const objectIdArr = []
 	const URI = 'https://book.naver.com/bookdb/book_detail.naver?bid='
 	for (const bid of bidArr) {
 		const link = URI + bid
@@ -34,8 +35,10 @@ export default async function fakeBooks (bidArr) {
 		const _id = ObjectID()
 		const review_count = Math.floor(Math.random() * 100)
 
+		objectIdArr.push(_id)
 		result.push({_id, title, link, image, author, price, discount, pubdate, review_count})
 	}
 
 	await fs.writeFile('./mockCrawl/books.json', JSON.stringify(result))
+	return objectIdArr
 }
