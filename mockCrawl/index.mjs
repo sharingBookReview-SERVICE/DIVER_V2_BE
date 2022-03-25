@@ -10,14 +10,14 @@ import fs from 'fs/promises'
  * @type {bid[]}
  */
 const bidArr = [8902711, 5128976]
-const result = []
-
 /**
  * Crawl book data and randomly generate review_count property. Saves result as JSON file.
  * @param bidArr {bid[]}
  * @returns {Promise<void>}
  */
 async function fakeBooks (bidArr) {
+
+	const result = []
 	const URI = 'https://book.naver.com/bookdb/book_detail.naver?bid='
 	for (const bid of bidArr) {
 		const link = URI + bid
