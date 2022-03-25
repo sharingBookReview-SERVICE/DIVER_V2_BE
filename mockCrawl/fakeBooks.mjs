@@ -11,7 +11,7 @@ import ObjectID from 'bson-objectid'
 /**
  * Crawl book data and randomly generate review_count property. Saves result as JSON file.
  * @param bidArr {bid[]}
- * @returns {Promise<void>}
+ * @returns {Promise<ObjectID[]>}
  */
 export default async function fakeBooks (bidArr) {
 
