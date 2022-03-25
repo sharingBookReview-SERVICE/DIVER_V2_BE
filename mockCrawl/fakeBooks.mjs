@@ -15,7 +15,7 @@ const bidArr = [8902711, 5128976]
  * @param bidArr {bid[]}
  * @returns {Promise<void>}
  */
-async function fakeBooks (bidArr) {
+export default async function fakeBooks (bidArr) {
 
 	const result = []
 	const URI = 'https://book.naver.com/bookdb/book_detail.naver?bid='
