@@ -38,5 +38,5 @@ export default async function fakeBooks (bidArr) {
 		result.push({title, link, image, author, price, discount, pubdate, review_count})
 	}
 
-	await fs.writeFile('./crawl.json', JSON.stringify(result))
+	await fs.writeFile('./mockCrawl/books.json', JSON.stringify(result))
 }
