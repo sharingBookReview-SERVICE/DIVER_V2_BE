@@ -1,4 +1,4 @@
-import { TEST_BESTSELLING_BOOKS_INFORMATION, TEST_BOOK_INFORMATION } from "../fake/book"
+import { TEST_BESTSELLING_BOOKS_INFORMATION, TEST_BOOK_INFORMATION } from "./book.fake_resource"
 import { BookRepository } from "../types/types"
 
 const fakeBookRepository : BookRepository = {
