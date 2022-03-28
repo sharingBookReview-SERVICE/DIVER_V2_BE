@@ -1,7 +1,6 @@
 import axios from 'axios'
 import cheerio from 'cheerio'
 import fs from 'fs/promises'
-import ObjectID from 'bson-objectid'
 
 /**
  * Book's ID from Naver book search (https://book.naver.com)
@@ -11,12 +10,11 @@ import ObjectID from 'bson-objectid'
 /**
  * Crawl book data and randomly generate review_count property. Saves result as JSON file.
  * @param bidArr {bid[]}
- * @returns {Promise<ObjectID[]>}
+ * @returns {Promise<void>}
  */
 export default async function fakeBooks (bidArr) {
 
 	const result = []
-	const objectIdArr = []
 	const URI = 'https://book.naver.com/bookdb/book_detail.naver?bid='
 	for (const bid of bidArr) {
 		const link = URI + bid
@@ -24,6 +22,7 @@ export default async function fakeBooks (bidArr) {
 		const $ = cheerio.load(data)
 
 		// 크롤링하는 속성
+		const _id = $('div.book_info_inner > div:nth-child(3)').children().remove().end().text().trim().split(' ')[1]
 		const title = $('div.book_info > h2 > a').children().remove().end().text().trim() //https://runkit.com/fffact/59293292f48c2a00125cc277
 		const image = $('div.thumb_type img').attr('src')
 		const author = $('div.book_info_inner > div:nth-child(2) > a:nth-child(2)').text()
@@ -32,13 +31,10 @@ export default async function fakeBooks (bidArr) {
 		const pubdate = $('div.book_info_inner > div:nth-child(2)').children().remove().end().text().trim().replaceAll('.', '-')
 
 		// 랜덤으로 생성하는 속성
-		const _id = ObjectID()
 		const review_count = Math.floor(Math.random() * 100)
 
-		objectIdArr.push(_id)
 		result.push({_id, title, link, image, author, price, discount, pubdate, review_count})
 	}
 
 	await fs.writeFile('./mockCrawl/books.json', JSON.stringify(result))
-	return objectIdArr
 }
