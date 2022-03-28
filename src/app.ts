@@ -1,7 +1,14 @@
 import express from 'express'
+import BookController from './books/book.controller'
 
 const app = express()
 const PORT = 3000
+
+app.use('/api', BookController)
+
+app.get('/', (req, res) => {
+  res.send('server is ready')
+})
 
 app.get('/books/:book_id', (req, res) => {
 	const book_id: string = req.params.book_id
